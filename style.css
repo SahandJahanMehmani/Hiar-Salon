@@ -13,9 +13,9 @@
   --color-cta: #E25D76;
   --color-text-main: #F7F5F2;
   --color-text-subtle: #AFA8A1;
-  --header-font-size : 25px;
-  --title-font-size : 20px;
-  --text-font-size : 14px;
+  --header-font-size : 2rem;
+  --title-font-size : 1.4rem;
+  --text-font-size : 0.8rem;
 }
 
 .body {
@@ -26,7 +26,7 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 50vh;
+    height: 60svh;
     max-width: 1200px;
     margin: 0 auto;
     background-image:url(/images/nav-bg-img.png) ;
@@ -36,16 +36,18 @@
 }
 
 .main-nav {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
     gap: 1rem;
-    
 }
 
 .main-nav > nav {
@@ -59,14 +61,18 @@
 
 .main-nav > nav > a {
     text-decoration: none;
+    font-size: var(--title-font-size);
     color: var(--color-text-main);
+    font-weight: 100;
 }
 
 .main-nav > h1 {
     color: var(--color-accent1);
     font-style: italic;
     font-weight: 500;
+    font-size: var(--header-font-size);
     text-shadow:2px 2px 5px var(--color-bg-main);
+    text-align: center;
 }
 
 .main-header-text {
@@ -86,7 +92,7 @@
 }
 
 .main-header-text > h2 {
-    font-size: var(--header-font-size);
+    font-size: var(--title-font-size);
     font-weight: 100;
 }
 
