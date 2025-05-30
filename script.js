@@ -1,33 +1,27 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const serviceContainer = document.querySelector('.service-container');
-    const cards = document.querySelectorAll('.service-card');
-    const leftArrow = document.querySelector('.arrow.left');
-    const rightArrow = document.querySelector('.arrow.right');
-    
-    let currentPosition = 0;
-    const cardWidth = 220; // Width of card + margin
-    const visibleCards = 3; // Number of cards visible at once
-    const maxPosition = (cards.length - visibleCards) * cardWidth;
+new Swiper('.serv-card-wrapper', {
+  loop: true,
+  spaceBetween: 30,
 
-    // Initialize position
-    updatePosition();
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
 
-    // Add click handlers for arrows
-    leftArrow.addEventListener('click', () => {
-        currentPosition = Math.min(currentPosition + cardWidth, 0);
-        updatePosition();
-    });
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 
-    rightArrow.addEventListener('click', () => {
-        currentPosition = Math.max(currentPosition - cardWidth, -maxPosition);
-        updatePosition();
-    });
-
-    function updatePosition() {
-        serviceContainer.style.transform = `translateX(${currentPosition}px)`;
-        
-        // Update arrow visibility
-        leftArrow.style.opacity = currentPosition < 0 ? '1' : '0.5';
-        rightArrow.style.opacity = currentPosition > -maxPosition ? '1' : '0.5';
+  breakpoints : {
+    0: {
+        slidesPerView: 1
+    },
+    768: {
+        slidesPerView: 2
+    },
+    1024: {
+        slidesPerView: 3
     }
-}); 
+  }
+});

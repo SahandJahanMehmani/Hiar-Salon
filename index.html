@@ -6,6 +6,12 @@
     <title>Hair Salon</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
 </head>
 <body class="body">
     <header class="main-header">
@@ -26,42 +32,52 @@
         </div>
     </header>
 
-    <section class="sec-service" id="services">
+    <section class="serv-container swiper">
         <h2 class="sec-title">Our Services</h2>
-        <div class="service-container">
-            <button class="arrow left">←</button>
-            <a href="#" class="service-card">
-                <div class="service-content">
-                    <img src="/images/nav-bg-img.png" alt="Haircut Service">
-                    <div class="overlay-text">Haircut & Styling</div>
-                </div>
-            </a>
-            <a href="#" class="service-card">
-                <div class="service-content">
-                    <img src="/images/nav-bg-img.png" alt="Hair Coloring">
-                    <div class="overlay-text">Hair Coloring</div>
-                </div>
-            </a>
-            <a href="#" class="service-card">
-                <div class="service-content">
-                    <img src="/images/nav-bg-img.png" alt="Hair Treatment">
-                    <div class="overlay-text">Hair Treatment</div>
-                </div>
-            </a>
-            <a href="#" class="service-card">
-                <div class="service-content">
-                    <img src="/images/nav-bg-img.png" alt="Hair Treatment">
-                    <div class="overlay-text">Hair Treatment</div>
-                </div>
-            </a>
-            <a href="#" class="service-card">
-                <div class="service-content">
-                    <img src="/images/nav-bg-img.png" alt="Hair Treatment">
-                    <div class="overlay-text">Hair Treatment</div>
-                </div>
-            </a>
-            <button class="arrow right">→</button>
+        <div class="serv-card-wrapper">
+            <ul class="serv-card-list swiper-wrapper">
+                <li class="serv-card swiper-slide" >
+                    <a href="#">
+                        <div class="service-content">
+                            <img src="/images/nav-bg-img.png" alt="Haircut Service">
+                            <div class="overlay-text">Haircut & Styling</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="serv-card swiper-slide" >
+                    <a href="#">
+                        <div class="service-content">
+                            <img src="/images/nav-bg-img.png" alt="Haircut Service">
+                            <div class="overlay-text">Haircut & Styling</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="serv-card swiper-slide" >
+                    <a href="#">
+                        <div class="service-content">
+                            <img src="/images/nav-bg-img.png" alt="Haircut Service">
+                            <div class="overlay-text">Haircut & Styling</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="serv-card swiper-slide" >
+                    <a href="#">
+                        <div class="service-content">
+                            <img src="/images/nav-bg-img.png" alt="Haircut Service">
+                            <div class="overlay-text">Haircut & Styling</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            
+
+            <div class="swiper-pagination"></div>
+            <div class="btn-prev swiper-button-prev"></div>
+            <div class="btn-next swiper-button-next"></div>
         </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
