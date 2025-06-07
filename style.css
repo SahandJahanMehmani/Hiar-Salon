@@ -182,6 +182,41 @@
     .serv-card-wrapper {
         margin: 0 10px 25px;
     }
+}
 
-    .serv-card-wrapper .swipe
+/* Home banner section */
+
+.home-banner {
+    background-color: #3a3535;
+    color: #F7F5F2;
+    padding: 70px 20px;
+    text-align: center;
+    
+}
+
+.home-banner > h2 {
+    margin: 10px;
+    color: var(--color-accent1);
+}
+
+.home-banner > h3 {
+    margin: 10px;
+}
+
+.home-banner > p {
+    font-weight: 100;
+    font-style: italic;
+    line-height: 2.;
+}
+
+.home-banner-img-container {
+    display:flex;
+    height: 400px;
+    width: 100%;
+}
+
+.home-banner-img-container > img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
 }
